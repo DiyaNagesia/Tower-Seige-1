@@ -1,4 +1,5 @@
 
+
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -70,16 +71,14 @@ function setup() {
   ball = Bodies.circle(50,200,20);
   World.add(world,ball);
 
-  slingShot = new SlingShot(this.ball,{x:200,y:200});
+  slingShot = new SlingShot(this.ball,{x:100,y:200});
 
 }
 
 function draw() {
 
- background("white")
+ background("#3C2E2E")
   Engine.update(engine);
- 
-  
  
   strokeWeight(2);
   stroke(15);
@@ -135,8 +134,16 @@ function draw() {
   stroke(15)
   fill("#FFBEC4")
   blocks9.display();
-  text("drag the line and release to hit the boxes",50,50)
-  ellipse(ball.position.x,ball.position.y,30);
+  fill("gold");
+   text("Drag the Hexagon Stone and release to, launch it towards the blocks",100,30)
+  textSize(20)
+  fill("yellow")
+  //imageMode(CENTER)
+  //ball = loadImage("polygon_img,ball.position.x-50,ball.position.y-80,40,40")
+  //ellipseMode(RADIUS)
+  ellipse(ball.position.x,ball.position.y,40)
+
+
   slingShot.display();
 }
 

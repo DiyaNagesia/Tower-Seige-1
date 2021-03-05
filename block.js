@@ -3,7 +3,7 @@ class Block{
   constructor(x, y, width, height) {
       var options = {
          
-          restitution :0.4,
+          restitution :0.0,
           friction :1.0,
           //isStatic:true
          
